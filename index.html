@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrezza Magalhães Cardoso | Desenvolvedora em Formação</title>
+
+    <!-- Biblioteca de ícones Font Awesome -->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Andrezza Magalhães Cardoso | Desenvolvedora em Formação</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -14,12 +25,12 @@
     <header class="header">
 
         <a href="#hero"> 
-            <img src="img/zz-logo.svg" 
-            alt="Logo da Andrezza, é uma logo roxa com dois Zs juntos e um personagem roxinho ao fundo">
+            <img src="img/logo_vetorizada.svg" 
+            alt="Logo pessoal da Andrezza">
         </a>
 
         <!-- nav significa área de navegação -->
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
                 <li>
                     <a href="#about">Sobre</a>
@@ -43,38 +54,48 @@
 
         <!-- Hero é a primeira seção de destaque e apresenta o objetivo principal do site, ele faz parte do main -->
         <section id="hero" class="hero">
-            <p>
-                Olá!
-            </p>
 
-            <h1>Andrezza Magalhães Cardoso</h1>
+            <div class="hero-left">
 
-            <h2>Desenvolvedora Backend em formação</h2>
+                <div class="hero-content">
 
-            <p>
-                Sou do Rio de Janeiro (São Gonçalo) e hoje moro em São Paulo, onde estou construindo minha transição da área de gestão para o desenvolvimento de software
-            </p>
+                    <p>
+                    Olá!
+                    </p>
 
-            <p>
-                Gosto de transformar problemas em soluções através da lógica de programação, principalmente com Java. E, quem sabe, um front-end bonito também kkk.
-            </p>
+                    <h1>Andrezza Magalhães Cardoso</h1>
 
-            <div class="hero-buttons">
+                    <h2>Desenvolvedora Backend em formação</h2>
 
-                <a href="#projects">Veja meus projetos</a>
+                    <p>
+                        Sou do Rio de Janeiro (São Gonçalo) e hoje moro em São Paulo - SP, onde estou construindo minha transição da área de gestão para o desenvolvimento de software
+                    </p>
+
+                    <p>
+                        Gosto de transformar problemas em soluções através da lógica de programação, principalmente com Java. E, quem sabe, um front-end bonito também kkk.
+                    </p>
+
+                </div>
             
-                <a 
-                href="https://github.com/AndrezzaC" 
-                target="_blank"
-                rel="noopener noreferrer">
-                GitHub
-                </a>
+                    <div class="hero-buttons">
 
+                        <a class="primary-button" href="#projects">Veja meus projetos</a>
+            
+                        <a 
+                            class="secondary-button"
+                            href="https://github.com/AndrezzaC" 
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                    </div>
             </div>
 
-            <img src="img/icone-eu.png" 
-            alt="avatar da Andrezza Magalhães Cardoso">
-
+            <div class="hero-image">
+                <img src="img/icone-eu.png" 
+                alt="avatar da Andrezza Magalhães Cardoso">
+            </div>
 
         </section>
 
@@ -98,18 +119,59 @@
 
             <h2>Tecnologias</h2>
 
-            <ul>
-                <li>Java</li>
-                <li>Python</li>
-                <li>Spring Boot</li>
-                <li>PostgreSQL</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>MongoDB</li>
-            </ul>
+            <div class="technologies-grid">
+
+                <article class="technology-card">
+                    <i class="fa-brands fa-java"></i>
+                    <h3>Java</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Spring Boot</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>PostgreSQL</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <h3>Git</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-brands fa-github"></i>
+                    <h3>GitHub</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-brands  fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-brands  fa-js"></i>
+                    <h3>JavaScript</h3>
+                </article>
+
+                <article class="technology-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>MongoDB</h3>
+                </article>
+
+            </div>
 
         </section>
 
@@ -117,24 +179,27 @@
 
             <h2>Projetos</h2>
 
-            <article>
+            <article class="project-card">
                 <h3>Sistema de Compras</h3>
 
                 <p>
                     Sistema de compras desenvolvido em Java que simula um fluxo de e-commerce no terminal, permitindo gerenciar carrinho, produtos e diferentes formas de pagamento, aplicando conceitos de Programação Orientada a Objetos.
                 </p>
 
-                <p>Tecnologias</p>
+                <div class="project-technologies">
 
-                <ul>
-                    <li>Java</li>
-                    <li>POO</li>
-                    <li>Maven</li>
-                    <li>Git/GitHub</li>
-                </ul>
+                    <h4>Tecnologias</h4>
 
+                         <ul>
+                            <li>Java</li>
+                            <li>POO</li>
+                            <li>Maven</li>
+                            <li>Git/GitHub</li>
+                        </ul>
+                </div>
+                
                 <a 
-                class="button"
+                class="primary-button"
                 href="https://github.com/AndrezzaC/sistema-compras"
                 target="_blank"
                 rel="noopener noreferrer">
@@ -142,24 +207,27 @@
                 </a>
             </article>
 
-            <article>
+            <article class="project-card">
                 <h3>Sistema de Tarefas</h3>
 
                 <p>
                     Aplicação de gerenciamento de tarefas desenvolvida em Java com operações CRUD, validação de dados e persistência em arquivo, simulando funcionalidades comuns de sistemas backend.
                 </p>
 
-                <p>Tecnologias</p>
+                <div class="project-technologies">
 
-                <ul>
-                    <li>Java</li>
-                    <li>CRUD</li>
-                    <li>POO</li>
-                    <li>Manipulação de Arquivos</li>
-                </ul>
+                    <h4>Tecnologias</h4>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>CRUD</li>
+                            <li>POO</li>
+                            <li>Manipulação de Arquivos</li>
+                        </ul>
+                </div>
 
                 <a 
-                    class="button"
+                    class="primary-button"
                     href="https://github.com/AndrezzaC/todo-list-console-java"
                     target="_blank"
                     rel="noopener noreferrer">
@@ -167,24 +235,27 @@
                 </a>
             </article>
 
-            <article>
+            <article class="project-card">
                 <h3>Sistema de Veículos</h3>
 
                 <p>
                     Projeto desenvolvido para praticar os principais pilares da Programação Orientada a Objetos, simulando o gerenciamento de veículos e aplicando herança, polimorfismo, abstração e encapsulamento.
                 </p>
             
-                <p>Tecnologias</p>
+                <div class="project-technologies">
 
-                <ul>
-                    <li>Java</li>
-                    <li>POO</li>
-                    <li>Maven</li>
-                    <li>Git/GitHub</li>
-                </ul>
+                    <h4>Tecnologias</h4>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>POO</li>
+                            <li>Maven</li>
+                            <li>Git/GitHub</li>
+                        </ul>
+                </div>
 
                 <a 
-                    class="button"
+                    class="primary-button"
                     href="https://github.com/AndrezzaC/sistema-veiculos"
                     target="_blank"
                     rel="noopener noreferrer">
@@ -192,26 +263,31 @@
                 </a>
             </article>
 
-            <article>
+            <article class="project-card">
+
                 <h3>VetCare API</h3>
 
                 <p>
                     Reescrita de um projeto desenvolvido durante a graduação, modernizado para uma API REST com Spring Boot. A aplicação realiza o gerenciamento de tutores de uma clínica veterinária, utilizando arquitetura em camadas, PostgreSQL, Spring Data JPA, Bean Validation e tratamento global de exceções, aplicando boas práticas de desenvolvimento backend.
                 </p>
 
-                <p>Tecnologias</p>
 
-                <ul>
-                    <li>Java</li>
-                    <li>Spring Boot</li>
-                    <li>Spring Data JPA</li>
-                    <li>PostgreSQL</li>
-                    <li>Bean Validation</li>
-                    <li>Maven</li>
-                </ul>
+                <div class="project-technologies">
+                    
+                    <h4>Tecnologias</h4>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>Spring Data JPA</li>
+                            <li>PostgreSQL</li>
+                            <li>Bean Validation</li>
+                            <li>Maven</li>
+                        </ul>
+                </div>
 
                 <a 
-                class="button"
+                class="primary-button"
                 href="https://github.com/AndrezzaC/vetcare-api"
                 target="_blank"
                 rel="noopener noreferrer">
@@ -226,22 +302,25 @@
 
             <h2>Contato</h2>
 
+            <p>Gostou do que estou construindo?</p>
+            <p>Ficarei feliz em conversar sobre oportunidades, projetos ou trocar experiências na área de desenvolvimento.</p> 
+
             <div class="contact-links">
                 <a href="https://linkedin.com/in/andrezza-m-cardoso"
                 target="_blank"
                 rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
 
                 <a href="https://github.com/AndrezzaC"
                 target="_blank"
                 rel="noopener noreferrer">
-                <i class="fa-brands fa-square-github"></i>GitHub</a>
+                <i class="fa-brands fa-square-github"></i> GitHub</a>
 
                 <a href="mailto:andrezza.m.cardoso@gmail.com"
                 rel="noopener noreferrer">
                 <i class="fa-solid fa-envelope">
                 </i>
-                andrezza.m.cardoso@gmail.com
+                 andrezza.m.cardoso@gmail.com
                 </a>
             </div>
         </section>
@@ -250,8 +329,7 @@
 
     <!-- O footer é o rodapé, são as informações finais, como direitos autorais ou contatos, infos extras -->
     <footer class="footer">
-        <p>&copy; 2026 Andrezza Magalhães Cardoso</p>
-        <p>Desenvolvido com HTML, CSS e JavaScript</p>
+        <p>&copy; 2026 Andrezza Magalhães Cardoso • Desenvolvido com HTML, CSS e JavaScript</p>
     </footer>
 </body>
 </html>
