@@ -1,16 +1,60 @@
+:root{
+    --primary-color: #5f4bb6;
+    --primary-hover: #7561d3;
+
+    --glass-background: rgba(255, 255, 255, 0.325);
+    --glass-background-hover: rgba(255, 255, 255, 0.60);
+    --glass-background-light: rgba(255, 255, 255, 0.30);
+    --header-background: rgba(255, 255, 255, 0.85);
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    --shadow-small: 0 8px 20px rgba(0, 0, 0, 0.12);
+    --shadow-image: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --shadow-hover: 0 14px 30px rgba(0, 0, 0, 0.18);
+
+    --blur: blur(12px); /*desfoca o que está atrás da seção*/
+
+    --radius-xl: 40px;
+    --radius-lg: 24px;
+    --radius-md: 20px;
+    --radius-sm: 14px;
+    --radius-xs: 12px;
+}
+
+.section-card{
+    background: var(--glass-background);
+    backdrop-filter: var(--blur);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+
+    padding: 50px;
+}
+
+.section-title{
+    font-size: 2.4rem;
+    color: var(--primary-color);
+
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/*faz a navegação por âncoras acontecer de forma suave*/
 html{
     scroll-behavior: smooth;
 }
 
+/*estilos aplicados à pagina inteira*/
 body{
-    margin: 0;
+    margin: 0; /*remove a margem padrão adicionada pelo navegador*/
     font-family: "Poppins", sans-serif;
 
     background-image: url("img/wallpaper-png.png");
     background-size: cover; /*aumenta a imagem até cobrir tudo*/
-    background-position: center; /*corta a imagem proporcionalmente e centraliza*/
+    background-position: center; /*mantém a imagem centralizada*/
     background-repeat: no-repeat; /*evita que a imagem se repita*/
-    background-attachment: fixed; /*a imagem fica fixa, sem se mexer quando scrollamos*/
+    background-attachment: fixed; /*mentém a imagem fixa durante a scrollagem*/
 }
 
 section{
@@ -33,10 +77,10 @@ section{
 
     padding: 20px 60px;
 
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px); /*desfoca o que está atrás do elemento*/
+    background: var(--header-background);
+    backdrop-filter: var(--blur); /*desfoca o que está atrás do elemento*/
 
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
     position: sticky;
@@ -52,7 +96,7 @@ section{
 .header a {
     text-decoration: none;
     
-    color: #5f4bb6;
+    color: var(--primary-color);
     
     font-weight: 500;
     
@@ -95,9 +139,9 @@ section{
     height: auto;
 
     /* arredondamento da borda */
-    border-radius: 40px;
+    border-radius: var(--radius-xl);
     
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    box-shadow: var(--shadow-image);
 }
 
 .hero-left{
@@ -119,7 +163,7 @@ section{
 }
 
 .hero-content h2{
-    color:#5f4bb6;
+    color:var(--primary-color);
 
     margin-bottom:20px;
 }
@@ -131,7 +175,7 @@ section{
 }
 
 .hero-content p:first-child{
-     color:#5f4bb6;
+     color: var(--primary-color);
 
     font-size:.9rem;
     font-weight:600;
@@ -154,7 +198,7 @@ section{
 
     padding: 14px 28px;
 
-    border-radius: 12px;
+    border-radius: var(--radius-xs);
 
     font-weight: 500;
 
@@ -164,46 +208,29 @@ section{
 }
 
 .primary-button{
-    background: #5f4bb6;
+    background: var(--primary-color);
     color: white;
 }
 
 .secondary-button{
-    border: 2px solid #5f4bb6;
-    color: #5f4bb6;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .primary-button:hover{
-    background:#7561d3;
+    background: var(--primary-hover);
     color: white;
     transform: translateY(-2px);
 }
 
 .secondary-button:hover{
-    background:#5f4bb6;
+    background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
 }
 
 .about-section{
-    background: rgba(255, 255, 255, 0.325);
-    backdrop-filter: blur(12px); /*desfoca o que está atrás da seção*/
-
-    border-radius: 24px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-
-    padding: 50px;
-
     margin-bottom: 40px;
-}
-
-.about-section h2{
-    font-size: 2.4rem;
-    color: #5f4bb6;
-
-    margin-top: 0;
-    margin-bottom: 30px;
 }
 
 .about-section p{
@@ -220,25 +247,6 @@ section{
     font-weight: 500;
 }
 
-.technologies-section{
-    background: rgba(255, 255, 255, 0.325);
-    backdrop-filter: blur(12px);
-
-    border-radius: 24px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-
-    padding: 50px;
-}
-
-.technologies-section h2{
-    font-size: 2.4rem;
-    color: #5f4bb6;
-
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
 .technologies-grid{
     display: grid;
 
@@ -249,10 +257,10 @@ section{
 
 .technology-card{
     min-height: 100px;
-    background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(12px);
+    background: var(--glass-background-light);
+    backdrop-filter: var(--blur);
 
-    border-radius: 14px;
+    border-radius: var(--radius-sm);
 
     padding: 20px 16px;
 
@@ -263,12 +271,12 @@ section{
             background-color .3s,
             box-shadow .3s;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-small);
 }
 
 .technology-card i{
     font-size: 2.8rem;
-    color: #5f4bb6;
+    color: var(--primary-color);
 
     margin-bottom: 20px;
 }
@@ -276,13 +284,13 @@ section{
 .technology-card:hover{
     transform: translateY(-10px) scale(1.03);
 
-    background: rgba(255, 255, 255, 0.60);
+    background: var(--glass-background-hover);
 
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .technology-card:hover i{
-    color:#7561d3;
+    color: var(--primary-hover);
 }
 
 .technology-card h3{
@@ -292,40 +300,23 @@ section{
 }
 
 .technology-card:hover h3{
-    color: #5f4bb6;
+    color: var(--primary-color);
 }
 
-.projects-section{
-    background: rgba(255, 255, 255, 0.325);
-    backdrop-filter: blur(12px);
-
-    border-radius: 24px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-
-    padding: 50px;
-}
-
-.projects-section h2{
-    font-size: 2.4rem;
-
-    color: #5f4bb6;
-
-    margin-top: 0;
-
+.projects-section .section-title{
     margin-bottom: 35px;
 }
 
 .project-card{
-    background: rgba(255, 255, 255, 0.30);
+    background: var(--glass-background-light);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: var(--blur);
 
     border-radius: 18px;
 
     padding: 30px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow);
 
     transition:
             transform 0.3s,
@@ -337,13 +328,13 @@ section{
 .project-card:hover{
     transform: translateY(-8px);
 
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    box-shadow: var(--shadow-hover);
 }
 
 .project-card h3{
     font-size: 1.7rem;
 
-    color: #5f4bb6;
+    color: var(--primary-color);
 
     margin-top: 0;
 
@@ -363,9 +354,7 @@ section{
 }
 
 .project-technologies h4{
-    color: #5f4bb6;
-
-    margin-bottom: 15px;
+    color: var(--primary-color);
 
     margin-top: 0;
     margin-bottom: 15px;
@@ -385,7 +374,7 @@ section{
 
 .project-technologies li{
     background: rgba(95, 75, 182, 0.12);
-    color: #5f4bb6;
+    color: var(--primary-color);
 
     padding: 8px 14px;
 
@@ -395,24 +384,7 @@ section{
     font-weight: 500;
 }
 
-.contact-section{
-    background: rgba(255, 255, 255, 0.325);
-    
-    backdrop-filter: blur(12px);
-
-    border-radius: 24px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-
-    padding: 50px;
-}
-
-.contact-section h2{
-    font-size: 2.4rem;
-
-    color: #5f4bb6;
-
-    margin-top: 0;
+.contact-section .section-title{
     margin-bottom: 25px;
 }
 
@@ -443,12 +415,12 @@ section{
 
     text-decoration: none;
 
-    color: #5f4bb6;
-    background: rgba(255,255,255,.30);
+    color: var(--primary-color);
+    background: var(--glass-background-light);
 
     padding: 14px 18px;
 
-    border-radius: 14px;
+    border-radius: var(--radius-sm);
 
     transition:
         transform .3s,
@@ -459,9 +431,9 @@ section{
 .contact-links a:hover{
     transform: translateY(-4px);
 
-    background: rgba(255, 255, 255, 0.60);
+    background: var(--glass-background-hover);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-small);
 }
 
 .contact-links i{
@@ -490,4 +462,11 @@ section{
     color: rgba(95, 75, 182, .85);
 
     font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    
+    .hero{
+        flex-direction: column;
+    }
 }
